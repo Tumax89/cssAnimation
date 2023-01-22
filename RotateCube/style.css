@@ -1,0 +1,76 @@
+*{
+      margin: 0;
+      padding: 0;
+}
+body { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: lightgray;
+      overflow: hidden;
+}
+
+.wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      perspective:1000px;
+}
+
+.box {
+      position: relative;
+      animation: rotate 30s infinite linear;
+      transform-style: preserve-3d;
+}
+
+.box-side {
+      display: block;
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      background-color: aqua;
+      opacity: 0.3;
+      border: 3px solid #fff;
+      font-size: 2rem;
+}
+
+.side-front {
+      transform: translateX(-180px) translateY(-180px) translateZ(180px);
+      background-color: red;
+}
+
+.side-back {
+      transform: translateX(-180px) translateY(-180px) translateZ(-180px);
+      background-color: green;
+}
+
+.side-left {
+      transform: translateX(-360px) translateY(-180px) rotateY(-90deg);
+      background-color: blue;
+}
+
+.side-right {
+      transform:  translateY(-180px) rotateY(90deg);
+      border-color: yellow;
+}
+
+.side-top {
+      transform: translateX(-180px) translateY(-360px) rotateX(90deg);
+      border-color: purple;
+}
+
+.side-bottom {
+      transform: translateX(-180px)  rotateX(90deg);
+      border-color: orange;
+}
+
+@keyframes rotate {
+      0% {
+            transform: rotate3d(0,0,0,0);
+      }
+      100% {
+            transform: rotate3d(0,1,0,-360deg);
+      }
+}

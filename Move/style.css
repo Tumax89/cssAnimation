@@ -1,0 +1,37 @@
+*{
+      margin: 0;
+      padding: 0;
+}
+body { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: lightgray;
+      overflow: hidden;
+}
+
+.box {
+      width: 100px;
+      height: 100px;
+      background: green;
+      animation: slide 10s ease-in-out both;
+}
+ 
+@keyframes slide {
+      20% { 
+            transform: translateX(300px);
+      }
+      40% {
+            transform: translate(300px,300px); //300рх баруун тийшээ, 300рх доошоо болно
+      }
+      60% {
+            transform: translate(-600px, 300px);// y тэнхлэгийн дагуу 300рх хэмжээндээ байна, харин зүүн тийшээ 600рх болгоно.
+      }
+      80% {
+            transform: translateX(-600px);//Y нь 0 дээр очно.
+      }
+      100% {
+            transform: translate(0);
+      }
+}

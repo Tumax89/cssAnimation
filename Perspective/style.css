@@ -1,0 +1,51 @@
+*{
+      margin: 0;
+      padding: 0;
+}
+body { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: lightgray;
+      overflow: hidden;
+}
+
+.wrapper {
+      perspective: 1000px; //тухайн элэментийн парент дээр нь тавьж өгхөд алслалтайгаар харагдана.
+}
+
+.nature {
+      width: 500px;
+      height: 30vh;
+      background: url("nature.jpg") no-repeat center/cover;
+      transition: transform 1s;
+}
+
+.nature:hover {
+      transform: rotateX(30deg);
+}
+
+.shape-group {
+      display: inline-flex;
+      perspective: 500px;
+      perspective-origin: left; //гэдгээр харааны өнцөгийг зааж өгдөг.
+}
+
+.shape-group:hover .shape2 {
+      transform: rotateY(90deg);
+}
+
+.shape1 {
+      width: 200px;
+      height: 50px;
+      background: yellowgreen;
+}
+
+.shape2 {
+      width: 50px;
+      height: 50px;
+      background: darkgreen;
+      transition: transform 1s;
+      transform-origin: left;
+}
