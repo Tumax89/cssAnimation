@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: lightgray;
+  overflow: hidden;
+}
+
+.satellite-path {
+  height: 300px;
+  width: 300px;
+  border: 1px solid teal;
+  border-radius: 50%;
+}
+
+.planet {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: teal;
+  border-radius: 50%;
+}
+
+.satellite-container {
+  position: absolute;
+  animation: spin 31s linear infinite;
+}
+
+.satellite {
+  position: absolute;
+  top: 135px;
+  height: 30px;
+  width: 30px;
+  background-color: teal;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
