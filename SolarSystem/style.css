@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.narnii-aimag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*Голлуулахын тулд дээрх 3 мөр кодыг бичив*/
+}
+
+.narnii-aimag > div {
+  position: absolute;
+  border-radius: 50%;
+  animation-name: orbit;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.narnii-aimag > div > div {
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+}
+.nar {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: orange;
+}
+.bud-orbit {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border: 2px solid gray;
+  animation-duration: 5.4s;
+}
+.bud {
+  height: 10px;
+  width: 10px;
+  background-color: gray;
+  margin-top: -6px;
+  margin-left: -6px;
+}
+
+.sugar-orbit {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border: 2px solid yellow;
+  animation-duration: 6.8s;
+}
+.sugar {
+  height: 15px;
+  width: 15px;
+  background-color: yellow;
+  margin-top: -8.5px;
+  margin-left: -8.5px;
+}
+
+.delhii-orbit {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border: 2px solid lightblue;
+  animation-duration: 9.7s;
+}
+.delhii {
+  height: 15px;
+  width: 15px;
+  background-color: lightblue;
+  margin-top: -10.5px;
+  margin-left: -10.5px;
+}
+
+.angarag-orbit {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border: 2px solid red;
+  animation-duration: 13.1s;
+}
+.angarag {
+  height: 15px;
+  width: 15px;
+  background-color: red;
+  margin-top: -8.5px;
+  margin-left: -8.5px;
+}
+
+.barhasbadi-orbit {
+  position: absolute;
+  height: 350px;
+  width: 350px;
+  border: 2px solid yellowgreen;
+  margin-left: -8.5px;
+  animation-duration: 24.1s;
+}
+.barhasbadi {
+  height: 30px;
+  width: 30px;
+  background-color: yellowgreen;
+  margin-top: -16.5px;
+  margin-left: -16.5px;
+}
+
+.sanchir-orbit {
+  position: absolute;
+  height: 450px;
+  width: 450px;
+  border: 2px solid rgb(193, 201, 177);
+  margin-left: -8.5px;
+  animation-duration: 29.8s;
+}
+.sanchir {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(193, 201, 177);
+  margin-top: -13.5px;
+  margin-left: -13.5px;
+}
+
+.tengeriin-van-orbit {
+  position: absolute;
+  height: 550px;
+  width: 550px;
+  border: 2px solid rgb(72, 195, 225);
+  margin-left: -8.5px;
+  animation-duration: 35s;
+}
+
+.tengeriin-van {
+  height: 15px;
+  width: 15px;
+  background-color: rgb(72, 195, 225);
+  margin-top: -8.5px;
+}
+
+.dalai-van-orbit {
+  position: absolute;
+  height: 620px;
+  width: 620px;
+  border: 2px solid rgb(117, 189, 117);
+  animation-duration: 47.9s;
+}
+.dalai-van {
+  height: 15px;
+  width: 15px;
+  background-color: rgb(72, 195, 225);
+  margin-top: -8.5px;
+  margin-left: -8.5px;
+}
+
+@keyframes orbit {
+  100% {
+    transform: rotate(360deg);
+  }
+}
