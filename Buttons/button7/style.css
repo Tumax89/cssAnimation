@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #272727;
+  overflow: hidden;
+}
+
+.btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #00aeff;
+  letter-spacing: 2px;
+  border: 2px solid #00aeff;
+  padding: 15px 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn:hover .davalgaa {
+  top: 0;
+}
+
+.davalgaa {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: calc(100% + 22px);
+  background-color: #00aeff;
+  transition: all 1s;
+  z-index: -1;
+}
+
+.davalgaa::before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: 0;
+  width: 100%;
+  height: 122px;
+  background: url(wave.png);
+  animation: davalgaa 0.5s linear infinite;
+}
+
+@keyframes davalgaa {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 118px;
+  }
+}
