@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ebecf0;
+  overflow: hidden;
+}
+
+.btn {
+  background-color: #ebecf0;
+  padding: 20px 60px;
+  border-radius: 30px;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #696969;
+  text-shadow: 1px 2px 0 #fff;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+  font-size: 13px;
+}
+
+.btn:active {
+  box-shadow: inset 1px 1px 2px #babecc, -1px -1px 3px #fff;
+}
