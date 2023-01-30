@@ -1,0 +1,115 @@
+$h: 80px;
+$w: 40px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  font-size: 40px;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #ffe1c5, #e4a068);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: $h;
+  height: $h;
+  background-color: #945915;
+  padding: 0 $w;
+  overflow: hidden;
+  position: relative;
+}
+
+.hours,
+.minutes,
+.seconds {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: calc($w / 4);
+  align-items: start;
+}
+
+.number {
+  height: $h;
+  width: $w;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fbfbfb;
+}
+
+.seconds__units {
+  transform: translateY(0);
+  animation: animateSecondsUnits 10s steps(10, end) infinite;
+}
+
+@keyframes animateSecondsUnits {
+  100% {
+    transform: translateY(-800px);
+  }
+}
+
+.seconds__tens {
+  transform: translateY(0);
+  animation: animateSecondsTens 60s steps(6, end) infinite;
+}
+
+@keyframes animateSecondsTens {
+  100% {
+    transform: translateY(-480px);
+  }
+}
+
+//minutes
+.minutes__units {
+  transform: translateY(0);
+  animation: animateMinutesUnits 600s steps(10, end) infinite;
+}
+
+@keyframes animateMinutesUnits {
+  100% {
+    transform: translateY(-800px);
+  }
+}
+
+.minutes__tens {
+  transform: translateY(0);
+  animation: animateMinutesTens 3600s steps(6, end) infinite;
+}
+
+@keyframes animateMinutesTens {
+  100% {
+    transform: translateY(-480px);
+  }
+}
+
+//hour
+.hours__units {
+  transform: translateY(0);
+  animation: animateHoursUnits 36000s steps(10, end) infinite;
+}
+
+@keyframes animateHoursUnits {
+  100% {
+    transform: translateY(-800px);
+  }
+}
+
+.hours__tens {
+  transform: translateY(0);
+  animation: animateHoursTens 108000s steps(3, end) infinite;
+}
+
+@keyframes animateHoursTens {
+  100% {
+    transform: translateY(-240px);
+  }
+}
